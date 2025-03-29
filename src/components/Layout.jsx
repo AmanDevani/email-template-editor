@@ -1,8 +1,7 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Layout({ children }) {
-  const navigate = useNavigate();
   const year = new Date().getFullYear();
   const url = import.meta.env.VITE_PORTFOLIO_URL;
 
@@ -12,7 +11,7 @@ export default function Layout({ children }) {
       event_label: "Visited Portfolio",
       value: url,
     });
-    navigate(url);
+    window.open(url, "_blank");
   };
 
   return (
