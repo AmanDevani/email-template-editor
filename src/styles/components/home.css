@@ -1,0 +1,58 @@
+/* Ensures full-screen layout */
+.editor-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Editor and Preview each take 50% width on large screens */
+.editor,
+.preview {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Preview styles */
+.preview {
+  background-color: #f4f4f4;
+  border-left: 2px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Iframe inside preview */
+.preview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* 🔹 Make it responsive for tablets & mobile */
+@media (max-width: 1024px) {
+  /* Tablets */
+  .editor-container {
+    flex-direction: column; /* Stack editor and preview */
+    height: auto;
+  }
+
+  .editor,
+  .preview {
+    width: 100%; /* Full width */
+    height: 50vh; /* Half of screen */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile */
+  .editor,
+  .preview {
+    height: 60vh; /* Editor takes more space */
+  }
+
+  .preview {
+    height: 40vh; /* Preview takes less space */
+  }
+}
