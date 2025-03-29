@@ -4,8 +4,9 @@ import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 import Layout from "./components/Layout";
 import React from "react";
-
+import app from "../package.json";
 function App() {
+  console.log(app?.version);
   return (
     <Router>
       <Layout>
