@@ -1,0 +1,28 @@
+/* Layout.css */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures full height */
+}
+
+.content {
+  flex: 1;
+}
+
+/* Footer should always stay at the bottom */
+.footer {
+  height: 50px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.owner-name a {
+  color: white;
+}
